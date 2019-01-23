@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,11 +17,20 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = this.getSharedPreferences("pl.apka.sharedpreferences", Context.MODE_PRIVATE);
 
-        sharedPreferences.edit().putString("username","Jan").apply();
+        ArrayList<String> friends = new ArrayList<>();
 
-        String username = sharedPreferences.getString("username","");
+        friends.add("Jan");
+        friends.add("Ola");
+        friends.add("Ala");
 
-        Log.e("username is: ",username);
+
+
+
+        //sharedPreferences.edit().putString("username","Jan").apply();
+
+        //String username = sharedPreferences.getString("username","");
+
+        //Log.e("username is: ",username);
 
     }
 }
